@@ -1,0 +1,8 @@
+historian
+blacksmith
+artist
+doctor
+surgeon
+thief
+farmer
+pastor
