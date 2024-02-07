@@ -51,6 +51,3 @@ class Npc:
     Vocation: {self.vocation}
     """
     )
-
-testNPC = Npc()
-testNPC.describe()
