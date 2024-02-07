@@ -1,4 +1,3 @@
-from pathlib import Path
 import os
 import random
 
@@ -41,11 +40,17 @@ class Npc:
   def assign_vocation(self):
     vocation_list_file = open(os.path.join(os.path.dirname(__file__), 'vocation.txt'))
     lines = vocation_list_file.read().splitlines() 
-    self.vocation = random.choice(lines)  
+    self.vocation = random.choice(lines) 
+
+  def describe(self):
+    print(
+    f"""
+    Name: {self.first_name} {self.last_name}
+    Race: {self.race}
+    Gender: {self.gender}
+    Vocation: {self.vocation}
+    """
+    )
 
 testNPC = Npc()
-print(testNPC.gender)
-print(testNPC.race)
-print(testNPC.first_name)
-print(testNPC.last_name)
-print(testNPC.vocation)
+testNPC.describe()
