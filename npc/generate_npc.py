@@ -1,8 +1,12 @@
 from Npc import *
 
-# NewNpc = Npc()
-
-# NewNpc.describe()
-
 number_of_npcs = input('How many NPCs do you want to generate? ')
-print(number_of_npcs)3
+number = 0
+npc_list = []
+
+while number < int(number_of_npcs):
+  npc_list.append(Npc())
+  number +=1
+
+for npc in npc_list:
+  npc.describe()
