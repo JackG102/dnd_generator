@@ -10,3 +10,5 @@ while number < int(number_of_npcs):
 
 for npc in npc_list:
   npc.describe()
+
+# List of vocations here: https://gist.github.com/wsc/1083459
