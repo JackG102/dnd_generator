@@ -3,12 +3,28 @@ import random
 
 class Npc:
   def __init__(self):
+    self.assign_alignment()
     self.assign_gender()
     self.assign_first_name()
     self.assign_last_name()
     self.assign_race()
     self.assign_vocation()
   
+  def assign_alignment(self):
+    alignment_list = [
+      'lawful good', 
+      'neutral good', 
+      'chaotic goodd', 
+      'lawful neutral',
+      'true neutral',
+      'chaotic neutral',
+      'lawful evil',
+      'neutral evil',
+      'chaotic evil'
+    ]
+
+    self.alignment = random.choice(alignment_list)
+
   def assign_first_name(self):
     list = ['first_name_male.txt', 'first_name_female.txt']
 
@@ -49,5 +65,6 @@ class Npc:
     Race: {self.race}
     Gender: {self.gender}
     Vocation: {self.vocation}
+    Alignment: {self.alignment}
     """
     )
