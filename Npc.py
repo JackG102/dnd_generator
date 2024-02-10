@@ -1,7 +1,11 @@
 import os
+from pathlib import Path
 import random
 
 class Npc:
+  project_location = str(Path(__file__).parent)
+  lists_folder_location = project_location + '/lists/'
+
   def __init__(self):
     self.assign_alignment()
     self.assign_gender()
@@ -35,12 +39,12 @@ class Npc:
     else:
       first_name_list_file_name = random.choice(list)
 
-    first_name_list_file = open(os.path.join(os.path.dirname(__file__), first_name_list_file_name))
+    first_name_list_file = open(os.path.join(os.path.dirname(self.lists_folder_location), first_name_list_file_name))
     lines = first_name_list_file.read().splitlines() 
     self.first_name = random.choice(lines)
   
   def assign_last_name(self):
-    last_name_list_file = open(os.path.join(os.path.dirname(__file__), 'last_name.txt'))
+    last_name_list_file = open(os.path.join(os.path.dirname(self.lists_folder_location), 'last_name.txt'))
     lines = last_name_list_file.read().splitlines() 
     self.last_name = random.choice(lines)
   
@@ -49,12 +53,12 @@ class Npc:
     self.gender = random.choice(gender_list)
 
   def assign_race(self):
-    race_list_file = open(os.path.join(os.path.dirname(__file__), 'race.txt'))
+    race_list_file = open(os.path.join(os.path.dirname(self.lists_folder_location), 'race.txt'))
     lines = race_list_file.read().splitlines() 
     self.race = random.choice(lines)
 
   def assign_vocation(self):
-    vocation_list_file = open(os.path.join(os.path.dirname(__file__), 'vocation.txt'))
+    vocation_list_file = open(os.path.join(os.path.dirname(self.lists_folder_location), 'vocation.txt'))
     lines = vocation_list_file.read().splitlines() 
     self.vocation = random.choice(lines) 
 
