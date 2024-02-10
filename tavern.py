@@ -24,18 +24,22 @@ class Tavern:
     self.name = f"{adjective_name.capitalize()} {animal_name}"
 
   def assign_tavern_keeper(self):
-    self.bar_keeper = Npc()
+    self.tavern_keeper = Npc()
   
   def assign_tavern_npcs(self):
     self.tavern_npcs = Npc.generate_npc(3)
-    # def describe(self):
-    #   print(
-    #   f"""
-    #   Name: {self.name}
-    #   """
-    #   )
+  
+  def describe(self):
+    print(
+    f"""
+  Tavern Name: {self.name}
+
+  Tavern Keeper: {self.tavern_keeper.describe()}
+  
+  Tavern NPCS: {self.tavern_npcs}
+    """
+    )
 
 testTavern = Tavern()
-print(testTavern.name)
-print(testTavern.tavern_npcs)
+testTavern.describe()
 

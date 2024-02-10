@@ -70,13 +70,10 @@ class Npc:
       npc_list.append(Npc())
       number +=1
 
-    for npc in npc_list:
-      npc.describe()
-
     return npc_list
 
   def describe(self):
-    print(
+    return (
     f"""
     Name: {self.first_name} {self.last_name}
     Race: {self.race}
