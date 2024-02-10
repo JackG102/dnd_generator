@@ -1,7 +1,8 @@
 import os
 import random
+import sys
 from pathlib import Path
-# from ..npc.Npc import *
+from npc import Npc
 
 class Tavern:
 
@@ -31,3 +32,4 @@ class Tavern:
 
 testTavern = Tavern()
 print(testTavern.name)
+

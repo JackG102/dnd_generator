@@ -14,7 +14,7 @@ class Npc:
     alignment_list = [
       'lawful good', 
       'neutral good', 
-      'chaotic goodd', 
+      'chaotic good', 
       'lawful neutral',
       'true neutral',
       'chaotic neutral',
