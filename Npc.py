@@ -62,6 +62,19 @@ class Npc:
     lines = vocation_list_file.read().splitlines() 
     self.vocation = random.choice(lines) 
 
+  def generate_npc(number_of_npcs):
+    number = 0
+    npc_list = [] 
+
+    while number < int(number_of_npcs):
+      npc_list.append(Npc())
+      number +=1
+
+    for npc in npc_list:
+      npc.describe()
+
+    return npc_list
+
   def describe(self):
     print(
     f"""
