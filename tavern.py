@@ -1,7 +1,7 @@
 import os
 import random
-import sys
 from pathlib import Path
+import Npc
 
 class Tavern:
   project_location = str(Path(__file__).parent)
@@ -9,6 +9,7 @@ class Tavern:
 
   def __init__(self):
     self.assign_name()
+    self.assign_tavern_keeper()
 
   def assign_name(self):
     adjective_list_file = open(os.path.join(os.path.dirname(self.lists_folder_location), 'adjectives.txt'))
@@ -20,6 +21,11 @@ class Tavern:
     animal_name = random.choice(animal_lines)
 
     self.name = f"{adjective_name.capitalize()} {animal_name}"
+
+  def assign_tavern_keeper(self):
+    self.bar_keeper = Npc()
+  
+  def assign_tavern_npcs(self):
 
     # def describe(self):
     #   print(
