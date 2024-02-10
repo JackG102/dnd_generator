@@ -33,7 +33,7 @@ class Tavern:
     print(
     f"""
   Tavern Name: {self.name}
-
+  
   Tavern Keeper: {self.tavern_keeper.describe()}
   
   Tavern NPCS: {self.tavern_npcs}
