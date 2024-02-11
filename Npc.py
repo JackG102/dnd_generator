@@ -2,6 +2,21 @@ import os
 from pathlib import Path
 import random
 
+"""
+A class to generate Non Playable Characters.
+They have the following attributes:
+ - Name
+ - Alignment
+ - Gender
+ - First and Last Names
+ - Race
+ - Vocations
+
+There are helper methods to:
+ - auto-generate NPCS
+ - describe the NPC in a string 
+"""
+
 class Npc:
   project_location = str(Path(__file__).parent)
   lists_folder_location = project_location + '/lists/'
