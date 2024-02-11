@@ -30,13 +30,23 @@ class Tavern:
     self.tavern_npcs = Npc.generate_npc(3)
   
   def describe(self):
+    tavern_npc_text = ''
+    for npc in self.tavern_npcs:
+      tavern_npc_text += f"""
+      Name: {npc.first_name} {npc.last_name}
+      Race: {npc.race}
+      Gender: {npc.gender}
+      Vocation: {npc.vocation}
+      Alignment: {npc.alignment}
+      """
+      
     print(
     f"""
   Tavern Name: {self.name}
   
   Tavern Keeper: {self.tavern_keeper.describe()}
   
-  Tavern NPCS: {self.tavern_npcs}
+  Tavern NPCS: {tavern_npc_text}
     """
     )
 
