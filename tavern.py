@@ -29,19 +29,13 @@ class Tavern:
   def assign_tavern_npcs(self):
     self.tavern_npcs = Npc.generate_npc(3)
 
-  def assign_signature_dish(self):
-    # TODO - add dish made of three ingredients with a funny name
+  # def assign_signature_dish(self):
+  #   # TODO - add dish made of three ingredients with a funny name
   
   def describe(self):
     tavern_npc_text = ''
     for npc in self.tavern_npcs:
-      tavern_npc_text += f"""
-      Name: {npc.first_name} {npc.last_name}
-      Race: {npc.race}
-      Gender: {npc.gender}
-      Vocation: {npc.vocation}
-      Alignment: {npc.alignment}
-      """
+      tavern_npc_text += npc.describe()
       
     print(
     f"""
