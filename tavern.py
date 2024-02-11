@@ -29,7 +29,7 @@ class Tavern:
   def assign_tavern_npcs(self):
     self.tavern_npcs = Npc.generate_npc(3)
 
-  def assign_tavern_dish(self):
+  def assign_signature_dish(self):
     # TODO - add dish made of three ingredients with a funny name
   
   def describe(self):
